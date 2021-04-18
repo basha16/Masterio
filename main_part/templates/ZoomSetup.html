@@ -1,0 +1,411 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zoom Setup</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/toggleswitch.css' %}">
+<style>
+.rightside {
+    float: right;
+    margin-top: -250px;
+    margin-right: 266px;
+}
+.card {
+    float: right;
+    margin-top: -270px;
+    margin-right: 34px;
+}
+</style>
+</head>
+<body> 
+yle>
+</head>
+<body>
+   <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index-2.html"><img src="{% static 'images/logo.png' %}" alt="logo"/ style="height: 60px;width: 200px"></a>
+        <a class="navbar-brand brand-logo-mini" href="index-2.html"><img src="{% static 'images/logo-mini.svg' %}" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <div class="nav-link">
+              <span class="dropdown-toggle btn btn-outline-dark" id="languageDropdown" data-toggle="dropdown">English</span>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+                <a class="dropdown-item font-weight-medium" href="#">
+                  French
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Espanol
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Latin
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Arabic
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="fas fa-bell mx-0"></i>
+              <span class="count">16</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 16 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="fas fa-exclamation-circle mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
+                  <p class="font-weight-light small-text">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="fas fa-wrench mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="far fa-envelope mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-envelope mx-0"></i>
+              <span class="count">25</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <div class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                </p>
+                <span class="badge badge-info badge-pill float-right">View all</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="{% static 'images/zoomlogo.png' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Zoom
+                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="{% static 'images/worksbotlogo.png' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Worksbot
+                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="logo.png" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium"> Masterio
+                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <h7>{{member.Username}}</h7>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-cog text-primary"></i>
+                My Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">
+                <i class="fas fa-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+	<nav class="sidebar sidebar-offcanvas" id="sidebar" style="float: left;">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="{% static 'images/teacherlogo.png' %}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  Masterio
+                </p>
+                <p class="designation">
+                  Instructor
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'insdashboard' %}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#MM" aria-expanded="false" aria-controls="page-layouts">
+             <i class="fas fa-camera-retro menu-icon"></i>
+              <span class="menu-title">Media Manager</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="MM">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{% url 'insnews' %}">-NewsLine</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#course" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-book menu-icon"></i>
+              <span class="menu-title">Courses</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="course">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{% url 'newcourse' %}">-Start New Course</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'allcourse' %}">-All Courses</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item active">
+            <a class="nav-link" data-toggle="collapse" href="#ZM" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-desktop menu-icon"></i>
+              <span class="menu-title">Zoom Meeting</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ZM">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item active"> <a class="nav-link" href="{% url 'zoomset' %}">-Zoom Setup</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">-Zoom Dashboard</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">-Create Meeting</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#quiz" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-question-circle menu-icon"></i>
+              <span class="menu-title">Quiz</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="quiz">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="">-Create Quiz</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'allstudents' %}">
+              <i class="fas fa-users menu-icon"></i>
+              <span class="menu-title">Students</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'message' %}">
+              <i class="far fa-envelope menu-icon"></i>
+              <span class="menu-title">Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'comments' %}">
+              <i class="fas fa-comments menu-icon"></i>
+              <span class="menu-title">Comments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'req' %}">
+              <i class="fad fa-money-bill-alt menu-icon"></i>
+              <span class="menu-title">Request Payment</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="fas fa-history menu-icon"></i>
+              <span class="menu-title">Earning History</span>
+            </a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#sett" aria-expanded="false" aria-controls="page-layouts">
+             <i class="fas fa-cog menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="sett">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'notifi' %}">-Notifications</a></li>
+                <li class="nav-item"> <a class="nav-link active" href="{% url 'faq2' %}">-FAQ</a></li>
+              </ul>
+            </div>
+          </li>
+          
+      </ul>
+  </nav>
+	<div class="main-panel" >
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h6 class="page-title">
+              Zoom Setup
+            </h6>
+	<ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              
+            </a>
+          </li>
+          </div>
+
+        <div class="container-fluid row">
+                    <div class="form-group">
+			<p>Update Zoom Token and email:</p>
+			</div>
+	</div>
+       <div class="container-fluid">
+                    <div class="form-group">
+			<div class="col-sm-5"> 
+                        <label for="Zoom Email">Zoom Email:</label>
+                        <input type="password" class="form-control" placeholder=""  required>
+                    </div>
+		</div>
+		</div>
+ 			<div class="container-fluid">
+                       <div class="form-group">
+			<div class="col-sm-5"> 
+                        <label for="Zoom jwt Token">Zoom jwt Token:</label>
+                        <textarea class="form-control" id="Zoom jwt Token" rows="4"> </textarea>
+		</div>
+		</div>
+		</div>
+		<div class="btn">
+		<button class="btn btn-primary" button type="submit"><i class="far fa-save"> Save </i></button>
+		</div>
+		<div class="rightside" style="float: right;">
+		<h5> <i class="far fa-question-circle"> How to get JWT Token and Email : </i></h5>
+		</div> <br>
+	       <div class="card" style="float: right;">
+                <div class="card-body">
+                  
+             1. First Sign up or Sign in here : <a href="https://marketplace.zoom.us/docs/guides/build"> Zoom Marget Place Portel</a>
+           <div class="dropdown-divider"></div>
+	     2. Click on Top right side menu and click on build app : <a href="https://zoom.us/signin"> Create app </a>
+	   <div class="dropdown-divider"></div>
+	     3. Choose JWT App and Continue...
+	    <div class="dropdown-divider"></div>
+	     4. After filling details click on creditional tab and bottom you will<br>  see JWT TOKEN change token expiry according to your setting
+	    <div class="dropdown-divider"></div>
+
+	     5. Paste your zoom email account id and JWT token here and create<br> edit meeting here.
+       
+       <script src="{% static 'js/vendor.bundle.base.js' %}"></script>
+       <script src="{% static 'js/vendor.bundle.addons.js' %}"></script>
+       <script src="{% static 'js/off-canvas.js' %}"></script>
+       <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+       <script src="{% static 'js/misc.js' %}"></script>
+       <script src="{% static 'js/settings.js' %}"></script>
+       <script src="{% static 'js/todolist.js' %}"></script>
+       <script src="{% static 'js/Script/dashboard.js' %}"></script>  
+       <script src="{% static 'js/file-upload.js' %}"></script>
+       <script src="{% static 'js/sparkline.js' %}"></script>
+       <script src="{% static 'js/just-gage.js' %}"></script>
+       <script src="{% static 'js/data-table.js"></script>
+       <script src="{% static 'js/jq.tablesort.js"></script>
+       <script src="{% static 'js/tablesorter.js"></script>
+       <script src="{% static 'js/summernote-bs4.min.js"></script>
+       <script src="{% static 'js/tinymce.min.js"></script>
+       <script src="{% static 'js/theme.js"></script>
+       <script src="{% static 'js/editorDemo.js"></script>
+  </body>
+</html>

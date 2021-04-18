@@ -1,0 +1,608 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messages</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/toggleswitch.css' %}">
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="index-2.html"><img src="{% static 'images/logo.png' %}" alt="logo"/ style="height: 60px;width: 200px"></a>
+        <a class="navbar-brand brand-logo-mini" href="index-2.html"><img src="{% static 'images/images/logo-mini.svg' %}" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+         
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <div class="nav-link">
+              <span class="dropdown-toggle btn btn-outline-dark" id="languageDropdown" data-toggle="dropdown">English</span>
+              <div class="dropdown-menu navbar-dropdown" aria-labelledby="languageDropdown">
+                <a class="dropdown-item font-weight-medium" href="#">
+                  French
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Espanol
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Latin
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item font-weight-medium" href="#">
+                  Arabic
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="fas fa-bell mx-0"></i>
+              <span class="count">16</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <a class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 16 new notifications
+                </p>
+                <span class="badge badge-pill badge-warning float-right">View all</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-danger">
+                    <i class="fas fa-exclamation-circle mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Application Error</h6>
+                  <p class="font-weight-light small-text">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="fas fa-wrench mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">Settings</h6>
+                  <p class="font-weight-light small-text">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="far fa-envelope mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-medium">New user registration</h6>
+                  <p class="font-weight-light small-text">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-envelope mx-0"></i>
+              <span class="count">25</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+              <div class="dropdown-item">
+                <p class="mb-0 font-weight-normal float-left">You have 7 unread mails
+                </p>
+                <span class="badge badge-info badge-pill float-right">View all</span>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="{% static 'images/zoomlogo.png' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Zoom
+                    <span class="float-right font-weight-light small-text">1 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="{% static 'images/worksbotlogo.png' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium">Worksbot
+                    <span class="float-right font-weight-light small-text">15 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                    <img src="{% static 'images/logo.png' %}" alt="image" class="profile-pic">
+                </div>
+                <div class="preview-item-content flex-grow">
+                  <h6 class="preview-subject ellipsis font-weight-medium"> Masterio
+                    <span class="float-right font-weight-light small-text">18 Minutes ago</span>
+                  </h6>
+                  <p class="font-weight-light small-text">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <h7>{{member.Username}}</h7>
+            
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+               
+                <i class="fas fa-cog text-primary"></i>
+               My Profile
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">
+                <i class="fas fa-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+	<nav class="sidebar sidebar-offcanvas" id="sidebar" style="float: left;">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="{% static 'images/teacherlogo.png' %}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  Masterio
+                </p>
+                <p class="designation">
+                  Instructor
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'insdashboard' %}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#MM" aria-expanded="false" aria-controls="page-layouts">
+             <i class="fas fa-camera-retro menu-icon"></i>
+              <span class="menu-title">Media Manager</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="MM">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{% url 'insnews' %}">-NewsLine</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#course" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-book menu-icon"></i>
+              <span class="menu-title">Courses</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="course">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item d-none d-lg-block"> <a class="nav-link" href="{% url 'newcourse' %}">-Start New Course</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'allcourse' %}">-All Courses</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ZM" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-desktop menu-icon"></i>
+              <span class="menu-title">Zoom Meeting</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ZM">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'zoomset' %}">-Zoom Setup</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">-Zoom Dashboard</a></li>
+                <li class="nav-item"> <a class="nav-link" href="">-Create Meeting</a></li>
+              </ul>
+            </div>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#quiz" aria-expanded="false" aria-controls="page-layouts">
+              <i class="fas fa-question-circle menu-icon"></i>
+              <span class="menu-title">Quiz</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="quiz">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="">-create Quiz</a></li>
+            
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'allstudents' %}">
+              <i class="fas fa-users menu-icon"></i>
+              <span class="menu-title">Students</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'message' %}">
+              <i class="far fa-envelope menu-icon"></i>
+              <span class="menu-title">Messages</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'comments' %}">
+              <i class="fas fa-comments menu-icon"></i>
+              <span class="menu-title">Comments</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'req' %}">
+              <i class="fad fa-money-bill-alt menu-icon"></i>
+              <span class="menu-title">Request Payment</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="fas fa-history menu-icon"></i>
+              <span class="menu-title">Earning History</span>
+            </a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#sett" aria-expanded="false" aria-controls="page-layouts">
+             <i class="fas fa-cog menu-icon"></i>
+              <span class="menu-title">Settings</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="sett">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'notifi' %}">-Notifications</a></li>
+                <li class="nav-item"> <a class="nav-link active" href="{% url 'faq2' %}">-FAQ</a></li>
+              </ul>
+            </div>
+          </li>
+          
+      </ul>
+  </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="email-wrapper wrapper">
+            <div class="row align-items-stretch">
+              <div class="mail-sidebar d-none d-lg-block col-md-2 pt-3 bg-white">
+                <div class="menu-bar">
+                  <ul class="menu-items">
+                    <li class="compose mb-3"><button class="btn btn-primary btn-block">Compose</button></li>
+                    <li class="active"><a href="#"><i class="fa fa-envelope-open"></i> Inbox</a><span class="badge badge-pill badge-success">8</span></li>
+                    <li><a href="#"><i class="fa fa-share"></i> Sent</a></li>
+                    <li><a href="#"><i class="fas fa-file"></i> Draft</a><span class="badge badge-pill badge-warning">4</span></li>
+                    <li><a href="#"><i class="fa fa-upload"></i> Outbox</a><span class="badge badge-pill badge-danger">3</span></li>
+                    <li><a href="#"><i class="fa fa-star"></i> Starred</a></li>
+                    <li><a href="#"><i class="fas fa-trash"></i> Trash</a></li>
+                  </ul>
+                  <div class="wrapper">
+                    <div class="online-status d-flex justify-content-between align-items-center">
+                    <p class="chat">Chats</p> <span class="status offline online"></span></div>
+                  </div>
+                  <ul class="profile-list">
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face1.jpg" alt=""></span><div class="user"><p class="u-name">David</p><p class="u-designation">Python Developer</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face2.jpg" alt=""></span><div class="user"><p class="u-name">Stella Johnson</p><p class="u-designation">SEO Expert</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face20.jpg" alt=""></span><div class="user"><p class="u-name">Catherine</p><p class="u-designation">IOS Developer</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face12.jpg" alt=""></span><div class="user"><p class="u-name">John Doe</p><p class="u-designation">Business Analyst</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face21.jpg" alt=""></span><div class="user"><p class="u-name">Daniel Russell</p><p class="u-designation">Tester</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face10.jpg" alt=""></span><div class="user"><p class="u-name">Sarah Graves</p><p class="u-designation">Admin</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face23.jpg" alt=""></span><div class="user"><p class="u-name">Sophia Lara</p><p class="u-designation">UI/UX</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face11.jpg" alt=""></span><div class="user"><p class="u-name">Catherine Myers</p><p class="u-designation">Business Analyst</p></div> </a></li>
+                    <li class="profile-list-item"> <a href="#"> <span class="pro-pic"><img src="../../images/faces/face9.jpg" alt=""></span><div class="user"><p class="u-name">Tim</p><p class="u-designation">PHP Developer</p></div> </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mail-list-container col-md-3 pt-4 pb-4 border-right bg-white">
+                <div class="border-bottom pb-4 mb-3 px-3">
+                  <div class="form-group">
+                    <input class="form-control w-100" type="search" placeholder="Search mail" id="Mail-rearch">
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">David Moore</p>
+                    <p class="message_text">Hi Emily, Please be informed that the new project presentation is due Monday.</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list new_mail">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input" checked> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Microsoft Account Password Change</p>
+                    <p class="message_text">Change the password for your Microsoft Account using the security code 35525</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Sophia Lara</p>
+                    <p class="message_text">Hello, last date for registering for the annual music event is closing in</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Stella Davidson</p>
+                    <p class="message_text">Hey there, can you send me this year’s holiday calendar?</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">David Moore</p>
+                    <p class="message_text">FYI</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Daniel Russel</p>
+                    <p class="message_text">Hi, Please find this week’s update..</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"><label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Sarah Graves</p>
+                    <p class="message_text">Hey, can you send me this year’s holiday calendar ?</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Bruno King</p>
+                    <p class="message_text">Hi, Please find this week’s monitoring report in the attachment.</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Me, Mark</p>
+                    <p class="message_text">Hi, Testing is complete. The system is ready to go live.</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Catherine Myers</p>
+                    <p class="message_text">Template Market: Limited Period Offer!!! 50% Discount on all Templates.</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Daniel Russell</p>
+                    <p class="message_text">Hi Emily, Please approve my leaves for 10 days from 10th May to 20th May.</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Sarah Graves</p>
+                    <p class="message_text">Hello there, Make the most of the limited period offer. Grab your favorites</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">John Doe</p>
+                    <p class="message_text">This is the first reminder to complete the online cybersecurity course</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+                <div class="mail-list">
+                  <div class="form-check"> <label class="form-check-label"> <input type="checkbox" class="form-check-input"> </label></div>
+                  <div class="content">
+                    <p class="sender-name">Bruno</p>
+                    <p class="message_text">Dear Employee, As per the regulations all employees are required to complete</p>
+                  </div>
+                  <div class="details">
+                    <i class="fa fa-star-o"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="mail-view d-none d-md-block col-md-9 col-lg-7 bg-white">
+                <div class="row">
+                  <div class="col-md-12 mb-4 mt-4">
+                    <div class="btn-toolbar">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary btn-icon-text"><i class="fas fa-reply text-primary btn-icon-prepend"></i> Reply</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary btn-icon-text"><i class="fas fa-reply-all text-primary btn-icon-prepend"></i>Reply All</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary btn-icon-text"><i class="fa fa-share text-primary btn-icon-prepend"></i>Forward</button>
+                      </div>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary btn-icon-text"><i class="fa fa-paperclip text-primary btn-icon-prepend"></i>Attach</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary btn-icon-text"><i class="fas fa-trash text-primary btn-icon-prepend"></i>Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="message-body">
+                  <div class="sender-details">
+                    <img class="img-sm rounded-circle mr-3" src="../../images/faces/face11.jpg" alt="">
+                    <div class="details">
+                      <p class="msg-subject">
+                        Weekly Update - Week 19 (May 8, 2017 - May 14, 2017)
+                      </p>
+                      <p class="sender-email">
+                        Sarah Graves
+                        <a href="#">itsmesarah268@gmail.com</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message-content">
+                    <p>Hi Emily,</p>
+                    <p>This week has been a great week and the team is right on schedule with the set deadline. The team has made great progress and achievements this week. At the current rate we will be able to deliver the product right on time and meet the quality that is expected of us. Attached are the seminar report held this week by our team and the final product design that needs your approval at the earliest.</p>
+                    <p>For the coming week the highest priority is given to the development for <a href="http://www.bootstrapdash.com/" target="_blank">http://www.bootstrapdash.com/</a> once the design is approved and necessary improvements are made.</p>
+                    <p><br><br>Regards,<br>Sarah Graves</p>
+                  </div>
+                  <div class="attachments-sections">
+                    <ul>
+                      <li>
+                        <div class="thumb"><i class="fa fa-file-pdf"></i></div>
+                        <div class="details">
+                          <p class="file-name">Seminar Reports.pdf</p>
+                          <div class="buttons">
+                            <p class="file-size">678Kb</p>
+                            <a href="#" class="view">View</a>
+                            <a href="#" class="download">Download</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="thumb"><i class="fa fa-file-image"></i></div>
+                        <div class="details">
+                          <p class="file-name">Product Design.jpg</p>
+                          <div class="buttons">
+                            <p class="file-size">1.96Mb</p>
+                            <a href="#" class="view">View</a>
+                            <a href="#" class="download">Download</a>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2020 Worksbot. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="far fa-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+
+  <script src="{% static 'js/vendor.bundle.base.js' %}"></script>
+  <script src="{% static 'js/vendor.bundle.addons.js' %}"></script>
+  <script src="{% static 'js/off-canvas.js' %}"></script>
+  <script src="{% static 'js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'js/misc.js' %}"></script>
+  <script src="{% static 'js/settings.js' %}"></script>
+  <script src="{% static 'js/todolist.js' %}"></script>
+  <script src="{% static 'js/Script/dashboard.js' %}"></script>  
+  <script src="{% static 'js/file-upload.js' %}"></script>
+  <script src="{% static 'js/sparkline.js' %}"></script>
+  <script src="{% static 'js/just-gage.js' %}"></script>
+  <script src="{% static 'js/data-table.js"></script>
+  <script src="{% static 'js/jq.tablesort.js"></script>
+  <script src="{% static 'js/tablesorter.js"></script>
+  <script src="{% static 'js/summernote-bs4.min.js"></script>
+  <script src="{% static 'js/tinymce.min.js"></script>
+  <script src="{% static 'js/theme.js"></script>
+  <script src="{% static 'js/editorDemo.js"></script>
+</body>
+
+
+<!-- Mirrored from www.bootstrapdash.com/demo/Worksbot/template/demo/pages/apps/email.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Feb 2021 13:02:18 GMT -->
+</html>
